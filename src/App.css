@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+html,body,#root{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+.App,#content{
+  height: 100%;
+	width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-150%) skew(-45deg);
+  }
+  100% {
+    transform: translateX(-25%) skew(-45deg);
   }
 }
+#glitchEffect{
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+#glitchEffect .glitchBar{
+	height: 20%;
+	width: 200%;
+	background-color: black;
+	transform: translateX(-25%) skew(-45deg);
+}
+#g1{
+	animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+#g2{
+	animation: 0.7s ease-out 0s 1 slideInFromLeft;
+}
+#g3{
+	animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+#g4{
+	animation: 1.4s ease-out 0s 1 slideInFromLeft;
+}
+#g5{
+	animation: 1.9s ease-out 0s 1 slideInFromLeft;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#content{
+  background-color: black;
+}
+#content *{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.typing{
+  font-size: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#cursor{
+  width: 12px;
 }
